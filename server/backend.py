@@ -55,7 +55,7 @@ class Backend_Api:
                 extra + special_instructions[jailbreak] + \
                 _conversation + [prompt]
 
-            url = f"{self.openai_api_base}/v1/chat/completions"
+            url = f"{self.openai_api_base}"
 
             proxies = None
             if self.proxy['enable']:
