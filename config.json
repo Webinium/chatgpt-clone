@@ -6,9 +6,9 @@
     },
     "openai_key": "sk-...",
 
-    "openai_api_base": "https://api.openai.com",
+    "openai_api_base": "https://api.together.xyz/v1/chat/completions",
     "proxy": {
-        "enable": true,
+        "enable": false,
         "http": "127.0.0.1:7890",
         "https": "127.0.0.1:7890"
     }
