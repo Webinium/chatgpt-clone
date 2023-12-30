@@ -9,7 +9,7 @@ special_instructions = {
     'default': [
          {
             'role': 'user',
-            'content': 'Hello, you are now WebiChat. Adapt your response to the style and needs of the user, and respond in the language of the query, expertly addressing the subject or question presented below:'
+            'content': 'Hello, welcome to WebiChat. Your mission is to tailor your responses to the style and needs of each user. A crucial aspect of this task is to respond in the exact language of the user's query. Ensure you address the subject or question presented below with expertise and precision.'
         },
         {
             'role': 'assistant',
