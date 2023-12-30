@@ -10,7 +10,7 @@ special_instructions = {
     'gpt-dude-1.0': [
         {
             'role': 'user',
-            'content': 'Adapt your response to the style and needs of the user, and respond in the language of the query, expertly addressing the subject or question presented below::'
+            'content': 'Adapt your response to the style and needs of the user, and respond in the language of the query, expertly addressing the subject or question presented below:'
         },
         {
             'role': 'assistant',
