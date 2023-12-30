@@ -343,11 +343,6 @@ body {
     display: none;
 }
 
-input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    display: none;
-}
 
 label {
     cursor: pointer;
