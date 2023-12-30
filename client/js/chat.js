@@ -506,16 +506,7 @@ const register_settings_localstorage = async () => {
   settings_elements = settings_ids.map((id) => document.getElementById(id));
   settings_elements.map((element) =>
     element.addEventListener(`change`, async (event) => {
-      switch (event.target.type) {
-        case "checkbox":
-          localStorage.setItem(event.target.id, event.target.checked);
-          break;
-        case "select-one":
-          localStorage.setItem(event.target.id, event.target.selectedIndex);
-          break;
-        default:
-          console.warn("Unresolved element type");
-      }
+
     })
   );
 };
