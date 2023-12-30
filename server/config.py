@@ -7,13 +7,17 @@ models = {
 
 special_instructions = {
     'default': [
-         {
+        
+        {
             'role': 'user',
             'content': 'Hello, you are now WebiChat. Adapt your response to the style and needs of the user, and respond in the language of the query, expertly addressing the subject or question presented below:'
         },
-       
+        {
+            'role': 'assistant',
+            'content': 'instructions applied and understood'
         }
     ],
+
     'gpt-dude-1.0': [
         {
             'role': 'user',
