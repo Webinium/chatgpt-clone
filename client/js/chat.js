@@ -127,7 +127,7 @@ const ask_gpt = async (message) => {
           id: window.token,
           content: {
             conversation: await get_conversation(window.conversation_id),
-            
+            internet_access: document.getElementById("switch").checked,
             content_type: "text",
             parts: [
               {
@@ -506,7 +506,16 @@ const register_settings_localstorage = async () => {
   settings_elements = settings_ids.map((id) => document.getElementById(id));
   settings_elements.map((element) =>
     element.addEventListener(`change`, async (event) => {
-
+      switch (event.target.type) {
+        case "checkbox":
+          localStorage.setItem(event.target.id, event.target.checked);
+          break;
+        case "select-one":
+          localStorage.setItem(event.target.id, event.target.selectedIndex);
+          break;
+        default:
+          console.warn("Unresolved element type");
+      }
     })
   );
 };
@@ -516,7 +525,16 @@ const load_settings_localstorage = async () => {
   settings_elements = settings_ids.map((id) => document.getElementById(id));
   settings_elements.map((element) => {
     if (localStorage.getItem(element.id)) {
-        
+      switch (element.type) {
+        case "checkbox":
+          element.checked = localStorage.getItem(element.id) === "true";
+          break;
+        case "select-one":
+          element.selectedIndex = parseInt(localStorage.getItem(element.id));
+          break;
+        default:
+          console.warn("Unresolved element type");
+      }
     }
   });
 };
