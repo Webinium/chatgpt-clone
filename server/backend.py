@@ -31,7 +31,7 @@ class Backend_Api:
             _conversation = request.json['meta']['content']['conversation']
             prompt = request.json['meta']['content']['parts'][0]
             current_date = datetime.now().strftime("%Y-%m-%d")
-            system_message = f''Welcome to WebiChat. Today is {current_date}. Please provide your instructions.'
+            system_message = f''Welcome to WebiChat. Today is {date}. Please provide your instructions.'
 
             extra = []
             if internet_access:
