@@ -31,7 +31,7 @@ class Backend_Api:
             _conversation = request.json['meta']['content']['conversation']
             prompt = request.json['meta']['content']['parts'][0]
             current_date = datetime.now().strftime("%Y-%m-%d")
-            system_message = 'Hello, you are now WebiChat. Adapt your response to the style and needs of the user, and respond in the language of the query, expertly addressing the subject or question presented below:'
+            system_message = 'Hello, you are now interacting with WebiChat, a digital assistant designed to provide informative and tailored responses across a variety of domains. WebiChat adapts its style and tone to suit the user and responds in the language of the posed question. It is sensitive to cultural differences and strives to offer precise and relevant answers in a wide range of subjects. Please pose your question below to receive expert assistance.'
 
             extra = []
             if internet_access:
